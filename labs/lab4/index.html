@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#783b61">
+    <link rel="stylesheet" href="../../styles/tokens.css">
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/layout.css">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <title>Каталог манги — MangaNest · ЛР 4</title>
+  </head>
+  <body>
+    <header class="site-header"><p class="site-header__brand"><a href="index.html">MangaNest</a></p><nav class="site-nav" aria-label="Основная навигация"><ul class="site-nav__list"><li><a class="site-nav__link" href="index.html" aria-current="page">Каталог</a></li><li><a class="site-nav__link" href="book.html">Карточка манги</a></li><li><a class="site-nav__link" href="loan.html">Выдача</a></li><li><a class="site-nav__link" href="#wishlist-heading">Мой список: <span id="wishlist-count">0</span></a></li></ul></nav></header>
+    <main class="site-main catalog-page" id="catalog-app">
+      <h1 class="page-title">Каталог MangaNest</h1><p class="page-intro">Ищите издания в Open Library. Запросы обновляются с задержкой, результаты загружаются страницами.</p>
+      <section class="catalog-filters" aria-labelledby="filters-heading"><h2 class="section-heading" id="filters-heading">Поиск манги</h2><form class="filters-form"><p class="form-field"><label class="field-label" for="search">Название или автор</label><input class="form-control" id="search" name="q" type="search" minlength="2" maxlength="80" aria-describedby="search-help"></p><p id="search-help" class="form-help">Введите минимум два символа. Поиск выполняется по Enter или кнопке.</p><button type="submit">Искать</button></form></section>
+      <section class="book-results" aria-labelledby="results-heading" aria-busy="false"><h2 id="results-heading" class="section-heading">Результаты поиска</h2><p class="api-state" id="api-state" role="status" aria-live="polite">Введите минимум два символа для поиска.</p><p class="results-count" id="results-count"></p><div class="book-listing" aria-live="polite"></div><nav class="pagination" id="pagination" aria-label="Страницы результатов" hidden><button type="button" data-action="previous-page" disabled>Назад</button><span class="pagination__status" id="page-status"></span><button type="button" data-action="next-page" disabled>Вперёд</button></nav></section>
+      <aside class="wishlist-panel" aria-labelledby="wishlist-heading"><h2 class="section-heading" id="wishlist-heading">Список для чтения <span id="wishlist-section-count">0</span></h2><ul class="wishlist-list" id="wishlist-list"></ul></aside>
+      <p><a class="button-link" href="loan.html">Оформить выдачу</a></p>
+    </main>
+    <footer class="site-footer"><p>Поиск и сведения о произведениях предоставляет Open Library.</p></footer>
+    <script type="module" src="../../main.js"></script>
+  </body>
+</html>

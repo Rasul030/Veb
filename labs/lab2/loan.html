@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../styles/tokens.css">
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/layout.css">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <title>Заявка на выдачу манги — MangaNest</title>
+  </head>
+  <body>
+    <header><p><a href="index.html">MangaNest</a></p><nav aria-label="Основная навигация"><ul><li><a href="index.html">Каталог</a></li><li><a href="book.html">Карточка манги</a></li><li><a href="loan.html" aria-current="page">Заявка на выдачу</a></li></ul></nav></header>
+    <main class="page-stack loan-page">
+      <h1 class="page-title">Заявка на выдачу манги</h1>
+      <p class="page-intro">Заполните данные читателя и выберите том, который хотите получить в библиотеке.</p>
+      <form class="form-stack loan-form" action="loan.html" method="get">
+        <fieldset class="form-group"><legend class="form-group__legend">Данные читателя</legend><p class="form-field"><label class="field-label" for="reader-name">Имя и фамилия</label><input class="form-control" id="reader-name" name="reader-name" type="text" required minlength="2" maxlength="80" autocomplete="name"></p><p class="form-field"><label class="field-label" for="reader-email">Электронная почта</label><input class="form-control" id="reader-email" name="reader-email" type="email" required maxlength="254" autocomplete="email"></p><p class="form-field"><label class="field-label" for="reader-phone">Телефон</label><input class="form-control" id="reader-phone" name="reader-phone" type="tel" required pattern="\+?[0-9\s()-]{10,20}" maxlength="20" autocomplete="tel"><span class="form-help">Допустимы цифры, пробелы, скобки, дефисы и знак плюс.</span></p></fieldset>
+        <fieldset class="form-group"><legend class="form-group__legend">Параметры выдачи</legend><p class="form-field"><label class="field-label" for="series">Серия и том</label><select class="form-control" id="series" name="series" required><option value="" selected disabled>Выберите мангу</option><option value="sky-archipelago-1">Архипелаг над облаками, том 1</option><option value="clockwork-fox-1">Заводная лисица, том 1</option><option value="moon-train-1">Лунный поезд, том 1</option><option value="paper-dragon-1">Бумажный дракон, том 1</option></select></p><p class="form-field"><label class="field-label" for="pickup-date">Желаемая дата получения</label><input class="form-control" id="pickup-date" name="pickup-date" type="date" required min="2026-01-01"></p><p class="form-field"><label class="field-label" for="loan-days">Срок выдачи в днях (от 1 до 30)</label><input class="form-control" id="loan-days" name="loan-days" type="number" required min="1" max="30" value="14"></p><p class="form-field"><label class="field-label" for="reader-note">Пожелания к выдаче</label><textarea class="form-control" id="reader-note" name="reader-note" rows="4" maxlength="500"></textarea></p></fieldset>
+        <fieldset class="form-group"><legend class="form-group__legend">Подтверждение</legend><p class="form-field form-field--inline"><input class="checkbox-input" id="rules-agree" name="rules-agree" type="checkbox" value="yes" required><label class="field-label" for="rules-agree">Согласен соблюдать правила библиотеки.</label></p></fieldset>
+        <button type="submit">Отправить заявку</button>
+      </form>
+      <aside class="loan-rules" aria-labelledby="rules-heading"><h2 class="section-heading" id="rules-heading">Правила выдачи</h2><p>Стандартный срок — 14 дней. Продление возможно, если на том нет очереди.</p><p>Библиотека ответит на заявку по электронной почте.</p><p>Часы работы: ежедневно с <time datetime="10:00">10:00</time> до <time datetime="20:00">20:00</time>.</p></aside>
+    </main>
+    <footer class="site-footer"><p>MangaNest — библиотека историй для каждого дня.</p><nav aria-label="Навигация в подвале"><ul><li><a href="index.html">Каталог</a></li><li><a href="book.html">Карточка манги</a></li></ul></nav></footer>
+  </body>
+</html>
+

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <title>Заявка на выдачу манги — MangaNest</title>
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-header__brand"><a href="index.html">MangaNest</a></p>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="book.html">Манга недели</a></li>
+        <li><a class="site-nav__link" href="loan.html" aria-current="page">Оформить выдачу</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main page-stack loan-page">
+    <h1 class="page-title">Заявка на выдачу манги</h1>
+    <p class="page-intro">Заполните форму, чтобы зарезервировать мангу в библиотеке MangaNest.</p>
+
+    <form class="form-stack loan-form" action="loan.html" method="post">
+      <fieldset class="form-group">
+        <legend class="form-group__legend">Читатель</legend>
+        <p class="form-field">
+          <label class="field-label" for="reader-name">Имя и фамилия</label>
+          <input class="form-control" id="reader-name" name="reader-name" type="text" required minlength="2" maxlength="80" autocomplete="name">
+        </p>
+        <p class="form-field">
+          <label class="field-label" for="reader-email">Электронная почта</label>
+          <input class="form-control" id="reader-email" name="reader-email" type="email" required maxlength="254" autocomplete="email">
+        </p>
+        <p class="form-field">
+          <label class="field-label" for="reader-phone">Телефон</label>
+          <input class="form-control" id="reader-phone" name="reader-phone" type="tel" required pattern="\+?[0-9\s()-]{10,20}" maxlength="20" autocomplete="tel" aria-describedby="phone-hint">
+        </p>
+        <p class="form-help" id="phone-hint">Введите номер длиной от 10 до 20 символов: цифры, пробелы, скобки, дефисы и знак +.</p>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend class="form-group__legend">Параметры выдачи</legend>
+        <p class="form-field">
+          <label class="field-label" for="book-title">Манга</label>
+          <select class="form-control" id="book-title" name="book-title" required>
+            <option value="" selected disabled>Выберите мангу</option>
+            <option value="quiet-garden">Тихий сад — Анна Лесная</option>
+            <option value="atlas-stars">Атлас звёзд — Ирина Соловьёва</option>
+            <option value="city-river">Город у реки — Елена Мирова</option>
+            <option value="roof-garden">Сад на крыше — Мария Цветкова</option>
+            <option value="lighthouse-letters">Письма с маяка — Олег Береговой</option>
+          </select>
+        </p>
+        <p class="form-field">
+          <label class="field-label" for="pickup-date">Желаемая дата получения</label>
+          <input class="form-control" id="pickup-date" name="pickup-date" type="date" required min="2026-10-30">
+        </p>
+        <p class="form-field">
+          <label class="field-label" for="loan-days">Срок выдачи в днях (от 1 до 30)</label>
+          <input class="form-control" id="loan-days" name="loan-days" type="number" min="1" max="30" value="14" required>
+        </p>
+        <p class="form-field">
+          <label class="field-label" for="reader-note">Пожелания к выдаче (необязательно)</label>
+          <textarea class="form-control" id="reader-note" name="reader-note" rows="4" maxlength="500"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend class="form-group__legend">Подтверждение</legend>
+        <p class="form-field form-field--inline">
+          <input class="checkbox-input" id="rules-agree" name="rules-agree" type="checkbox" value="yes" required>
+          <label class="field-label" for="rules-agree">Я согласен соблюдать правила пользования библиотекой.</label>
+        </p>
+      </fieldset>
+      <button type="submit">Отправить заявку</button>
+    </form>
+
+    <aside class="loan-rules" aria-labelledby="loan-rules-heading">
+      <h2 class="section-heading" id="loan-rules-heading">Правила выдачи</h2>
+      <p>Обычный срок выдачи — 14 дней. Продлить его можно, если на мангу нет очереди.</p>
+      <p>Библиотека подтвердит заявку по электронной почте в течение одного рабочего дня.</p>
+      <p>Сроки работы: понедельник—суббота, с <time datetime="09:00">09:00</time> до <time datetime="18:00">18:00</time>.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>MangaNest — библиотека историй для каждого дня.</p>
+    <nav class="site-nav" aria-label="Навигация в подвале">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="book.html">Манга недели</a></li>
+        <li><a class="site-nav__link" href="loan.html">Форма выдачи</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

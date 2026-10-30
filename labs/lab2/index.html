@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../styles/tokens.css">
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/layout.css">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <title>Каталог манги — MangaNest</title>
+  </head>
+  <body>
+    <header>
+      <p><a href="index.html">MangaNest</a></p>
+      <nav aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html" aria-current="page">Каталог</a></li>
+          <li><a href="book.html">Карточка манги</a></li>
+          <li><a href="loan.html">Заявка на выдачу</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="catalog-page">
+      <h1 class="page-title">Каталог манги</h1>
+      <p class="page-intro">Ищите новые серии, знакомьтесь с авторами и резервируйте тома в библиотеке MangaNest.</p>
+      <section class="catalog-filters" aria-labelledby="filters-heading">
+        <h2 id="filters-heading" class="section-heading">Фильтры каталога</h2>
+        <form class="filters-form" action="index.html" method="get">
+          <p class="form-field"><label class="field-label" for="query">Название или автор</label><input class="form-control" id="query" name="q" type="search" minlength="2" maxlength="80"></p>
+          <p class="form-field"><label class="field-label" for="genre">Жанр</label><select class="form-control" id="genre" name="genre"><option value="all">Все жанры</option><option value="action">Экшен</option><option value="fantasy">Фэнтези</option><option value="science-fiction">Научная фантастика</option><option value="drama">Драма</option><option value="slice-of-life">Повседневность</option></select></p>
+          <p class="form-field"><label class="field-label" for="sort">Сортировка</label><select class="form-control" id="sort" name="sort"><option value="title">По названию</option><option value="year">По году</option><option value="rating">По рейтингу</option></select></p>
+          <p class="form-field form-field--inline"><input class="checkbox-input" id="available" name="available" type="checkbox" value="yes"><label class="field-label" for="available">Только доступные тома</label></p>
+          <button type="submit">Применить фильтры</button>
+        </form>
+      </section>
+      <section class="book-results book-listing" aria-labelledby="results-heading">
+        <h2 id="results-heading" class="section-heading">Популярные серии</h2>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/sky-archipelago.svg" alt="Обложка манги «Архипелаг над облаками»: острова парят над морем облаков" width="320" height="480"><figcaption>Фэнтези · 2024</figcaption></figure><header class="book-card__header"><h3 class="book-card__title"><a href="book.html">Архипелаг над облаками</a></h3><p class="book-card__meta">Ая Мори</p></header><p class="book-card__summary">Юная картографка ищет пропавший остров на краю неба.</p><p>Рейтинг: 4,9 из 5. <time datetime="2024">2024 год</time>.</p><p class="book-card__action"><a class="button-link" href="book.html">Подробнее</a></p></article>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/clockwork-fox.svg" alt="Обложка манги «Заводная лисица»: механическая лиса среди фонарей" width="320" height="480"><figcaption>Экшен · 2023</figcaption></figure><header class="book-card__header"><h3 class="book-card__title">Заводная лисица</h3><p class="book-card__meta">Рэн Такахаси</p></header><p class="book-card__summary">Механическая лиса помогает ученику мастера раскрыть тайну старого города.</p><p>Рейтинг: 4,7 из 5. <time datetime="2023">2023 год</time>.</p><p class="book-card__action"><a class="button-link" href="loan.html">Зарезервировать</a></p></article>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/library-rain.svg" alt="Обложка манги «Библиотека дождя»: читательница открывает книгу под дождём" width="320" height="480"><figcaption>Драма · 2022</figcaption></figure><header class="book-card__header"><h3 class="book-card__title">Библиотека дождя</h3><p class="book-card__meta">Нао Кимура</p></header><p class="book-card__summary">Каждая книга в библиотеке хранит воспоминание своего читателя.</p><p>Рейтинг: 4,8 из 5. <time datetime="2022">2022 год</time>.</p><p>Сейчас выдана.</p></article>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/moon-train.svg" alt="Обложка манги «Лунный поезд»: поезд движется мимо большого полумесяца" width="320" height="480"><figcaption>Научная фантастика · 2025</figcaption></figure><header class="book-card__header"><h3 class="book-card__title">Лунный поезд</h3><p class="book-card__meta">Эми Сато</p></header><p class="book-card__summary">Проводница ночного экспресса доставляет пассажиров на орбитальную станцию.</p><p>Рейтинг: 4,9 из 5. <time datetime="2025">2025 год</time>.</p><p class="book-card__action"><a class="button-link" href="loan.html">Зарезервировать</a></p></article>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/paper-dragon.svg" alt="Обложка манги «Бумажный дракон»: дракон из бумаги летит над горами" width="320" height="480"><figcaption>Фэнтези · 2021</figcaption></figure><header class="book-card__header"><h3 class="book-card__title">Бумажный дракон</h3><p class="book-card__meta">Хару Ямамото</p></header><p class="book-card__summary">Сложенный из бумаги дракон оживает и зовёт мастерицу в горы.</p><p>Рейтинг: 4,6 из 5. <time datetime="2021">2021 год</time>.</p><p class="book-card__action"><a class="button-link" href="loan.html">Зарезервировать</a></p></article>
+          <article class="book-card"><figure class="book-card__figure"><img class="book-card__cover" src="../../assets/covers/summer-comet.svg" alt="Обложка манги «Комета в конце лета»: два школьника наблюдают комету" width="320" height="480"><figcaption>Повседневность · 2020</figcaption></figure><header class="book-card__header"><h3 class="book-card__title">Комета в конце лета</h3><p class="book-card__meta">Юи Накамура</p></header><p class="book-card__summary">Друзья проводят последние каникулы у моря и строят планы на будущее.</p><p>Рейтинг: 4,5 из 5. <time datetime="2020">2020 год</time>.</p><p>Сейчас выдана.</p></article>
+      </section>
+      <aside class="catalog-recommendation" aria-labelledby="recommendation-heading"><h2 id="recommendation-heading" class="section-heading">Совет библиотекаря</h2><p>Если нравится приключенческое фэнтези, начните с «Архипелага над облаками».</p><p><a href="book.html">Открыть карточку серии</a></p></aside>
+    </main>
+    <footer class="site-footer"><p>MangaNest — библиотека историй для каждого дня.</p><nav aria-label="Навигация в подвале"><ul><li><a href="index.html">Каталог</a></li><li><a href="book.html">Карточка манги</a></li><li><a href="loan.html">Заявка на выдачу</a></li></ul></nav></footer>
+  </body>
+</html>
+

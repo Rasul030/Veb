@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480" role="img" aria-labelledby="title desc">
+  <title id="title">Бумажный дракон</title><desc id="desc">Оригами-дракон летит над вершинами гор.</desc>
+  <rect width="320" height="480" fill="#e9b992"/><circle cx="247" cy="97" r="41" fill="#f7e4bf"/><path d="M0 331 92 205l89 126 63-84 76 84v149H0Z" fill="#69526b"/><path d="m55 366 86-139 43 70 45-88 91 157v101H55Z" fill="#3c3b59"/><path d="m70 152 93 22 48-63 15 74 59 28-74 20-46 64-8-75-87-70Z" fill="#a63c54"/><path d="m159 174-22-53 61 18m-29 63 68 1" fill="none" stroke="#fff0d4" stroke-width="8"/><text x="160" y="451" fill="#fff4dc" font-family="Georgia,serif" font-size="25" text-anchor="middle">БУМАЖНЫЙ ДРАКОН</text>
+</svg>

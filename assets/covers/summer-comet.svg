@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480" role="img" aria-labelledby="title desc">
+  <title id="title">Комета в конце лета</title><desc id="desc">Друзья наблюдают за кометой на берегу моря.</desc>
+  <rect width="320" height="480" fill="#3d4c74"/><path d="M0 295q80-28 160 0t160 0v185H0Z" fill="#426f8c"/><path d="M0 337q80-24 160 0t160 0" fill="none" stroke="#c1d6d2" stroke-width="8"/><path d="m70 78 170 65-145-13 132 85-168-105Z" fill="#f6dfa2"/><circle cx="81" cy="285" r="22" fill="#e5ad8c"/><circle cx="158" cy="278" r="22" fill="#d8937b"/><path d="M48 405q3-93 22-97 27 5 31 97zm77-4q5-104 33-106 29 6 34 106z" fill="#403552"/><text x="160" y="455" fill="#fff4dc" font-family="Georgia,serif" font-size="21" text-anchor="middle">КОМЕТА В КОНЦЕ ЛЕТА</text>
+</svg>

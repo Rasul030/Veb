@@ -1,0 +1,37 @@
+{
+  "name": "manganest-react-labs",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src eslint.config.js vite.config.ts",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-hook-form": "latest",
+    "react-router": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/node": "latest",
+    "@vitejs/plugin-react": "latest",
+    "@eslint/js": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "globals": "latest"
+  }
+}

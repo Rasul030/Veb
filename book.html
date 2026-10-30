@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <title>Манга — MangaNest</title>
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-header__brand"><a href="index.html">MangaNest</a></p>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="book.html" aria-current="page">Карточка манги</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main page-stack">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html">Каталог</a></li>
+        <li class="breadcrumbs__item" aria-current="page">Карточка манги</li>
+      </ol>
+    </nav>
+
+    <p class="api-state" id="detail-state" role="status" aria-live="polite">Загружаем карточку манги…</p>
+    <article class="book-detail" id="book-detail" hidden>
+      <header class="book-detail__header">
+        <h1 class="page-title" id="detail-title"></h1>
+        <p class="page-intro" id="detail-author"></p>
+      </header>
+      <figure class="book-detail__figure" id="detail-figure" hidden>
+        <img class="book-detail__cover" id="detail-cover" width="320" height="480" alt="">
+        <figcaption class="book-detail__caption">Обложка из Open Library</figcaption>
+      </figure>
+      <section class="book-meta-section" aria-labelledby="detail-meta-heading">
+        <h2 class="section-heading" id="detail-meta-heading">Сведения о манге</h2>
+        <dl class="book-meta">
+          <dt class="book-meta__term">Рейтинг</dt>
+          <dd class="book-meta__value" id="detail-rating"></dd>
+          <dt class="book-meta__term">Количество оценок</dt>
+          <dd class="book-meta__value" id="detail-rating-count"></dd>
+          <dt class="book-meta__term">Авторы</dt>
+          <dd class="book-meta__value" id="detail-authors"></dd>
+        </dl>
+      </section>
+      <section class="book-description" aria-labelledby="detail-description-heading">
+        <h2 class="section-heading" id="detail-description-heading">Описание</h2>
+        <p id="detail-description"></p>
+        <h3 class="section-heading">Темы</h3>
+        <ul id="detail-subjects"></ul>
+      </section>
+    </article>
+
+    <a class="button-link" href="index.html">Вернуться в каталог</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>Данные манги предоставлены Open Library.</p>
+  </footer>
+  <script type="module" src="book-detail.js"></script>
+</body>
+</html>
